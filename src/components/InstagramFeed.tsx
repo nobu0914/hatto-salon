@@ -1,6 +1,6 @@
 "use client";
 
-import Script from "next/script";
+import { useEffect } from "react";
 
 declare global {
   namespace JSX {
@@ -14,16 +14,15 @@ declare global {
 }
 
 export default function InstagramFeed() {
-  return (
-    <>
-      <Script
-        id="behold-widget"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `(() => { const d=document,s=d.createElement("script");s.type="module";s.src="https://w.behold.so/widget.js";d.head.append(s); })();`,
-        }}
-      />
-      <behold-widget feed-id="dkQ6HkSCCUMZIgK2wzPO" />
-    </>
-  );
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.type = "module";
+    s.src = "https://w.behold.so/widget.js";
+    document.head.append(s);
+    return () => {
+      document.head.removeChild(s);
+    };
+  }, []);
+
+  return <behold-widget feed-id="dkQ6HkSCCUMZIgK2wzPO" />;
 }
