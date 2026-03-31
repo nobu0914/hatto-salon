@@ -15,7 +15,7 @@ export default function ContactPage() {
     <div className="max-w-2xl mx-auto px-4 py-16">
       {/* Header */}
       <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
           Contact
         </p>
         <h1 className="text-2xl font-bold text-[#333] tracking-wide mb-3">
@@ -34,7 +34,7 @@ export default function ContactPage() {
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-[#f78da7] text-white py-4 rounded-2xl text-sm font-medium hover:bg-[#f06292] transition-colors"
+          className="flex items-center justify-center gap-2 bg-[#8B7355] text-white py-4 rounded-2xl text-sm font-medium hover:bg-[#7A6048] transition-colors"
         >
           ホットペッパーで予約
         </a>
@@ -48,7 +48,7 @@ export default function ContactPage() {
         </a>
       </div>
 
-      <div className="border-t border-[#f0d0d8] pt-10">
+      <div className="border-t border-[#E8DDD0] pt-10">
         <h2 className="text-base font-bold text-[#333] mb-6">
           メールでのお問い合わせ
         </h2>

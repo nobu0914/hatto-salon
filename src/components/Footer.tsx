@@ -10,7 +10,7 @@ const pageLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#fdf7f9] border-t border-[#f0d0d8] mt-20">
+    <footer className="bg-[#FAF7F2] border-t border-[#E8DDD0] mt-20">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -29,7 +29,7 @@ export default function Footer() {
                 <li key={n.href}>
                   <Link
                     href={n.href}
-                    className="text-sm text-[#666] hover:text-[#f78da7] transition-colors"
+                    className="text-sm text-[#666] hover:text-[#8B7355] transition-colors"
                   >
                     {n.label}
                   </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-[#f0d0d8] text-center">
+        <div className="mt-10 pt-6 border-t border-[#E8DDD0] text-center">
           <p className="text-xs text-[#999]">
             © {new Date().getFullYear()} 株式会社HATTO. All Rights Reserved.
           </p>

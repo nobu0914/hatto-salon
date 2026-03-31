@@ -16,7 +16,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-[#f0d0d8]">
+    <header className="sticky top-0 z-50 bg-white border-b border-[#E8DDD0]">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link
           href="/"
@@ -31,7 +31,7 @@ export default function Header() {
             <Link
               key={n.href}
               href={n.href}
-              className="text-sm text-[#555] hover:text-[#f78da7] transition-colors"
+              className="text-sm text-[#555] hover:text-[#8B7355] transition-colors"
             >
               {n.label}
             </Link>
@@ -40,7 +40,7 @@ export default function Header() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#f78da7] text-white text-sm px-5 py-2 rounded-full hover:bg-[#f06292] transition-colors"
+            className="bg-[#8B7355] text-white text-sm px-5 py-2 rounded-full hover:bg-[#7A6048] transition-colors"
           >
             ご予約はこちら
           </a>
@@ -66,7 +66,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-t border-[#f0d0d8] px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t border-[#E8DDD0] px-4 py-4 flex flex-col gap-4">
           {navLinks.map((n) => (
             <Link
               key={n.href}
@@ -81,7 +81,7 @@ export default function Header() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#f78da7] text-white text-sm px-5 py-3 rounded-full text-center"
+            className="bg-[#8B7355] text-white text-sm px-5 py-3 rounded-full text-center"
             onClick={() => setOpen(false)}
           >
             ご予約はこちら

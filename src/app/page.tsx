@@ -36,8 +36,8 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#fdf7f9] py-24 md:py-36 text-center px-4">
-        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-4 uppercase">
+      <section className="relative bg-[#FAF7F2] py-24 md:py-36 text-center px-4">
+        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-4 uppercase">
           Hair & Kimono Styling Salon
         </p>
         <h1 className="text-4xl md:text-6xl font-bold tracking-[0.2em] text-[#333] mb-6">
@@ -55,7 +55,7 @@ export default function Home() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#f78da7] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#f06292] transition-colors"
+            className="bg-[#8B7355] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#7A6048] transition-colors"
           >
             ホットペッパーで予約
           </a>
@@ -63,7 +63,7 @@ export default function Home() {
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-[#f78da7] text-[#f78da7] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#fdf2f5] transition-colors"
+            className="border border-[#8B7355] text-[#8B7355] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#FAF7F2] transition-colors"
           >
             LINEで問い合わせ
           </a>
@@ -73,7 +73,7 @@ export default function Home() {
       {/* Services */}
       <section className="max-w-6xl mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+          <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
             Services
           </p>
           <h2 className="text-2xl font-bold text-[#333] tracking-wide">
@@ -84,7 +84,7 @@ export default function Home() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="border border-[#f0d0d8] rounded-2xl p-6 hover:shadow-sm transition-shadow"
+              className="border border-[#E8DDD0] rounded-2xl p-6 hover:shadow-sm transition-shadow"
             >
               <h3 className="text-base font-bold text-[#333] mb-2">
                 {s.title}
@@ -92,14 +92,14 @@ export default function Home() {
               <p className="text-sm text-[#666] leading-relaxed mb-3">
                 {s.desc}
               </p>
-              <p className="text-xs text-[#f78da7]">{s.time}</p>
+              <p className="text-xs text-[#8B7355]">{s.time}</p>
             </div>
           ))}
         </div>
         <div className="text-center mt-10">
           <Link
             href="/price"
-            className="text-sm text-[#f78da7] border-b border-[#f78da7] pb-0.5 hover:text-[#f06292] hover:border-[#f06292] transition-colors"
+            className="text-sm text-[#8B7355] border-b border-[#8B7355] pb-0.5 hover:text-[#7A6048] hover:border-[#7A6048] transition-colors"
           >
             料金一覧を見る →
           </Link>
@@ -107,8 +107,8 @@ export default function Home() {
       </section>
 
       {/* Booking CTA */}
-      <section className="bg-[#fdf7f9] py-16 px-4 text-center">
-        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+      <section className="bg-[#FAF7F2] py-16 px-4 text-center">
+        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
           Reservation
         </p>
         <h2 className="text-2xl font-bold text-[#333] mb-4 tracking-wide">
@@ -122,7 +122,7 @@ export default function Home() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#f78da7] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#f06292] transition-colors"
+            className="bg-[#8B7355] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#7A6048] transition-colors"
           >
             ホットペッパービューティーで予約
           </a>
@@ -136,7 +136,7 @@ export default function Home() {
           </a>
           <Link
             href="/contact"
-            className="border border-[#f78da7] text-[#f78da7] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#fdf2f5] transition-colors"
+            className="border border-[#8B7355] text-[#8B7355] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#FAF7F2] transition-colors"
           >
             お問い合わせフォーム
           </Link>
@@ -146,7 +146,7 @@ export default function Home() {
       {/* Access */}
       <section className="max-w-6xl mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+          <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
             Access
           </p>
           <h2 className="text-2xl font-bold text-[#333] tracking-wide">
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <div className="space-y-4">
             <div>
-              <p className="text-xs font-semibold text-[#f78da7] mb-1">
+              <p className="text-xs font-semibold text-[#8B7355] mb-1">
                 住所
               </p>
               <address className="not-italic text-sm text-[#555] leading-relaxed">
@@ -168,7 +168,7 @@ export default function Home() {
               </address>
             </div>
             <div>
-              <p className="text-xs font-semibold text-[#f78da7] mb-1">
+              <p className="text-xs font-semibold text-[#8B7355] mb-1">
                 最寄り駅
               </p>
               <p className="text-sm text-[#555]">
@@ -178,7 +178,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold text-[#f78da7] mb-1">
+              <p className="text-xs font-semibold text-[#8B7355] mb-1">
                 営業時間
               </p>
               <p className="text-sm text-[#555]">

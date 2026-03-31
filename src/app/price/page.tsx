@@ -131,7 +131,7 @@ export default function PricePage() {
     <div className="max-w-3xl mx-auto px-4 py-16">
       {/* Header */}
       <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
           Menu / Price
         </p>
         <h1 className="text-2xl font-bold text-[#333] tracking-wide mb-3">
@@ -143,7 +143,7 @@ export default function PricePage() {
       </div>
 
       {/* Early morning surcharge */}
-      <div className="bg-[#fdf7f9] border border-[#f0d0d8] rounded-2xl p-5 mb-10 text-sm text-[#555] leading-relaxed">
+      <div className="bg-[#FAF7F2] border border-[#E8DDD0] rounded-2xl p-5 mb-10 text-sm text-[#555] leading-relaxed">
         <p className="font-semibold text-[#333] mb-2">早朝料金（税込）</p>
         <ul className="space-y-1">
           <li>AM6:30〜AM7:00　＋3,300円</li>
@@ -156,7 +156,7 @@ export default function PricePage() {
       <div className="space-y-14">
         {sections.map((section) => (
           <section key={section.title}>
-            <h2 className="text-base font-bold text-[#333] border-b border-[#f0d0d8] pb-2 mb-4">
+            <h2 className="text-base font-bold text-[#333] border-b border-[#E8DDD0] pb-2 mb-4">
               {section.title}
             </h2>
             {section.subtitle && (
@@ -210,7 +210,7 @@ export default function PricePage() {
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#f78da7] text-white px-10 py-3 rounded-full text-sm font-medium hover:bg-[#f06292] transition-colors"
+          className="inline-block bg-[#8B7355] text-white px-10 py-3 rounded-full text-sm font-medium hover:bg-[#7A6048] transition-colors"
         >
           ホットペッパービューティーで予約
         </a>

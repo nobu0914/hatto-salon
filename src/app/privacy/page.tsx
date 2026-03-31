@@ -8,7 +8,7 @@ export default function PrivacyPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-16">
       <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
           Privacy Policy
         </p>
         <h1 className="text-2xl font-bold text-[#333] tracking-wide">
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
           </address>
         </section>
 
-        <p className="text-xs text-[#999] pt-4 border-t border-[#f0d0d8]">
+        <p className="text-xs text-[#999] pt-4 border-t border-[#E8DDD0]">
           制定日：2024年1月1日
         </p>
       </div>

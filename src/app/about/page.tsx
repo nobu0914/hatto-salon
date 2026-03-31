@@ -18,7 +18,7 @@ export default function AboutPage() {
     <div className="max-w-2xl mx-auto px-4 py-16">
       {/* Header */}
       <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">
           About
         </p>
         <h1 className="text-2xl font-bold text-[#333] tracking-wide">
@@ -27,7 +27,7 @@ export default function AboutPage() {
       </div>
 
       {/* Table */}
-      <div className="divide-y divide-[#f0d0d8]">
+      <div className="divide-y divide-[#E8DDD0]">
         {companyInfo.map(({ label, value }) => (
           <div
             key={label}
