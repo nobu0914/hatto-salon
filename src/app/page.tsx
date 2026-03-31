@@ -10,16 +10,19 @@ const services = [
     title: "着付け・ヘアメイク",
     desc: "振袖・袴・訪問着・留め袖など、何でもお任せ！経験豊富な着付け師が綺麗にお着付け致します。",
     image: "/menu01.jpg",
+    link: "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000352141&ch=5&vos=cphpbprocap0130408001",
   },
   {
     title: "ヘアアレンジ／メイクレッスン",
     desc: "ヘアメイク、アイメイク、着付けなどカリキュラムごとに技術を取得可能です。",
     image: "/menu02.jpg",
+    link: "https://beauty.hotpepper.jp/slnH000352141/?cstt=1&wak=BPSC200405_link_maplist",
   },
   {
     title: "撮影",
     desc: "和装、洋装どちらもお任せ下さい！ご新郎ご新婦様の大切な一日のお手伝いをさせて頂きます。",
     image: "/menu03.jpg",
+    link: "https://hatto-salon.com/photoshoot/",
   },
 ];
 
@@ -94,9 +97,17 @@ export default function Home() {
                 <h3 className="text-base font-bold text-[#333] mb-2">
                   {s.title}
                 </h3>
-                <p className="text-sm text-[#666] leading-relaxed">
+                <p className="text-sm text-[#666] leading-relaxed mb-4">
                   {s.desc}
                 </p>
+                <a
+                  href={s.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block border border-[#8B7355] text-[#8B7355] text-xs px-4 py-2 rounded-full hover:bg-[#8B7355] hover:text-white transition-colors"
+                >
+                  詳しくはこちら
+                </a>
               </div>
             </div>
           ))}
