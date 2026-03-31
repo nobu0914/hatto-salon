@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const BOOKING_URL =
   "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000352141&ch=5&vos=cphpbprocap0130408001";
@@ -36,37 +37,47 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#FAF7F2] py-24 md:py-36 text-center px-4">
-        <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-4 uppercase">
-          Hair & Kimono Styling Salon
-        </p>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-[0.2em] text-[#333] mb-6">
-          HATTO
-        </h1>
-        <p className="text-sm md:text-base text-[#666] leading-relaxed mb-10 max-w-md mx-auto">
-          東京・外神田の着付け・ヘアメイクサロン。
-          <br />
-          成人式・卒業式・七五三・撮影など
-          <br />
-          大切な一日をトータルにコーディネートします。
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#8B7355] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#7A6048] transition-colors"
-          >
-            ホットペッパーで予約
-          </a>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-[#8B7355] text-[#8B7355] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#FAF7F2] transition-colors"
-          >
-            LINEで問い合わせ
-          </a>
+      <section className="relative h-[70vh] min-h-[480px] flex items-center justify-center text-center overflow-hidden">
+        <Image
+          src="/hero.jpg"
+          alt="HATTOサロン"
+          fill
+          className="object-cover object-top"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 px-4">
+          <p className="text-xs tracking-[0.3em] text-white/80 mb-4 uppercase">
+            Hair & Kimono Styling Salon
+          </p>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-[0.2em] text-white mb-6">
+            HATTO
+          </h1>
+          <p className="text-sm md:text-base text-white/90 leading-relaxed mb-10 max-w-md mx-auto">
+            東京・外神田の着付け・ヘアメイクサロン。
+            <br />
+            成人式・卒業式・七五三・撮影など
+            <br />
+            大切な一日をトータルにコーディネートします。
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#8B7355] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#7A6048] transition-colors"
+            >
+              ホットペッパーで予約
+            </a>
+            <a
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-white/20 transition-colors"
+            >
+              LINEで問い合わせ
+            </a>
+          </div>
         </div>
       </section>
 
