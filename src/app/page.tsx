@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import InstagramFeed from "@/components/InstagramFeed";
 
 const BOOKING_URL =
   "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000352141&ch=5&vos=cphpbprocap0130408001";
@@ -120,6 +121,15 @@ export default function Home() {
             料金一覧を見る →
           </Link>
         </div>
+      </section>
+
+      {/* Instagram Feed */}
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <div className="text-center mb-8">
+          <p className="text-xs tracking-[0.3em] text-[#8B7355] mb-2 uppercase">Instagram</p>
+          <h2 className="text-2xl font-bold text-[#333] tracking-wide">@hatto_salon</h2>
+        </div>
+        <InstagramFeed />
       </section>
 
       {/* Booking CTA */}
