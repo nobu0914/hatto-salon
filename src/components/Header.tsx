@@ -5,9 +5,8 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "ホーム" },
-  { href: "/price", label: "料金" },
+  { href: "/price", label: "料金メニュー" },
   { href: "/contact", label: "お問い合わせ" },
-  { href: "/about", label: "会社概要" },
 ];
 
 const BOOKING_URL =
