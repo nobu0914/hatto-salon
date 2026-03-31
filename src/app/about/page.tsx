@@ -42,8 +42,16 @@ export default function AboutPage() {
       {/* Map */}
       <div className="mt-12">
         <p className="text-sm font-medium text-[#333] mb-4">地図</p>
-        <div className="bg-[#f5f5f5] rounded-2xl h-72 flex items-center justify-center text-sm text-[#999]">
-          地図を表示（Googleマップ埋め込み）
+        <div className="rounded-2xl overflow-hidden h-72">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9566283317286!2d139.7697207!3d35.7026849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188eb0017da995%3A0x917af5e9c0eb7899!2z44OY44Ki44Oh44Kk44Kv552A5LuY44GR44K144Ot44OzSEFUVE8o44OP44OD44OI44Km77yJ!5e0!3m2!1sja!2sjp!4v1774967576296!5m2!1sja!2sjp"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </div>
