@@ -9,17 +9,17 @@ const services = [
   {
     title: "着付け・ヘアメイク",
     desc: "振袖・袴・訪問着・留め袖など、何でもお任せ！経験豊富な着付け師が綺麗にお着付け致します。",
-    time: "",
+    image: "/menu01.jpg",
   },
   {
     title: "ヘアアレンジ／メイクレッスン",
     desc: "ヘアメイク、アイメイク、着付けなどカリキュラムごとに技術を取得可能です。",
-    time: "",
+    image: "/menu02.jpg",
   },
   {
     title: "撮影",
     desc: "和装、洋装どちらもお任せ下さい！ご新郎ご新婦様の大切な一日のお手伝いをさせて頂きます。",
-    time: "",
+    image: "/menu03.jpg",
   },
 ];
 
@@ -85,15 +85,19 @@ export default function Home() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="border border-[#E8DDD0] rounded-2xl p-6 hover:shadow-sm transition-shadow"
+              className="border border-[#E8DDD0] rounded-2xl overflow-hidden hover:shadow-sm transition-shadow"
             >
-              <h3 className="text-base font-bold text-[#333] mb-2">
-                {s.title}
-              </h3>
-              <p className="text-sm text-[#666] leading-relaxed mb-3">
-                {s.desc}
-              </p>
-              <p className="text-xs text-[#8B7355]">{s.time}</p>
+              <div className="relative h-48 w-full">
+                <Image src={s.image} alt={s.title} fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-base font-bold text-[#333] mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-[#666] leading-relaxed">
+                  {s.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
