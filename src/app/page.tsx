@@ -1,65 +1,199 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const BOOKING_URL =
+  "https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000352141&ch=5&vos=cphpbprocap0130408001";
+const LINE_URL = "https://lin.ee/zcClomJ";
+
+const services = [
+  {
+    title: "着付け",
+    desc: "振袖・留め袖・訪問着・袴・浴衣など各種着付けに対応。丁寧な仕上がりで大切な一日をお手伝いします。",
+    time: "施術時間 30分〜",
+  },
+  {
+    title: "ヘアメイク",
+    desc: "ヘアセット＋フルメイクから日本髪まで。式典・撮影・特別なシーンに合わせたスタイルをご提案します。",
+    time: "施術時間 45〜60分",
+  },
+  {
+    title: "ヘアメイクリハーサル",
+    desc: "海外挙式前や婚礼会場でリハーサルがない方向け。当日のイメージを事前に確認できます。",
+    time: "施術時間 2時間",
+  },
+  {
+    title: "セットメニュー",
+    desc: "卒業式（袴）・成人式・浴衣など、着付け＋ヘア＋メイクをまとめてお得にご利用いただけます。",
+    time: "早朝料金別途",
+  },
+  {
+    title: "七五三",
+    desc: "お子様の大切な記念日をサポート。事前にLINEにてご相談ください。",
+    time: "詳細はお問い合わせを",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero */}
+      <section className="relative bg-[#fdf7f9] py-24 md:py-36 text-center px-4">
+        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-4 uppercase">
+          Hair & Kimono Styling Salon
+        </p>
+        <h1 className="text-4xl md:text-6xl font-bold tracking-[0.2em] text-[#333] mb-6">
+          HATTO
+        </h1>
+        <p className="text-sm md:text-base text-[#666] leading-relaxed mb-10 max-w-md mx-auto">
+          東京・外神田の着付け・ヘアメイクサロン。
+          <br />
+          成人式・卒業式・七五三・撮影など
+          <br />
+          大切な一日をトータルにコーディネートします。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#f78da7] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#f06292] transition-colors"
+          >
+            ホットペッパーで予約
+          </a>
+          <a
+            href={LINE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#f78da7] text-[#f78da7] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#fdf2f5] transition-colors"
+          >
+            LINEで問い合わせ
+          </a>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="max-w-6xl mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+            Services
           </p>
+          <h2 className="text-2xl font-bold text-[#333] tracking-wide">
+            サービス内容
+          </h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="border border-[#f0d0d8] rounded-2xl p-6 hover:shadow-sm transition-shadow"
+            >
+              <h3 className="text-base font-bold text-[#333] mb-2">
+                {s.title}
+              </h3>
+              <p className="text-sm text-[#666] leading-relaxed mb-3">
+                {s.desc}
+              </p>
+              <p className="text-xs text-[#f78da7]">{s.time}</p>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <Link
+            href="/price"
+            className="text-sm text-[#f78da7] border-b border-[#f78da7] pb-0.5 hover:text-[#f06292] hover:border-[#f06292] transition-colors"
+          >
+            料金一覧を見る →
+          </Link>
+        </div>
+      </section>
+
+      {/* Booking CTA */}
+      <section className="bg-[#fdf7f9] py-16 px-4 text-center">
+        <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+          Reservation
+        </p>
+        <h2 className="text-2xl font-bold text-[#333] mb-4 tracking-wide">
+          ご予約・お問い合わせ
+        </h2>
+        <p className="text-sm text-[#666] leading-relaxed mb-8 max-w-sm mx-auto">
+          Webクーポンをご利用の場合はホットペッパービューティーからのご予約がお得です。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-[#f78da7] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#f06292] transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            ホットペッパービューティーで予約
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-[#06C755] text-white px-8 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Documentation
+            LINEで問い合わせ
           </a>
+          <Link
+            href="/contact"
+            className="border border-[#f78da7] text-[#f78da7] px-8 py-3 rounded-full text-sm font-medium hover:bg-[#fdf2f5] transition-colors"
+          >
+            お問い合わせフォーム
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Access */}
+      <section className="max-w-6xl mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <p className="text-xs tracking-[0.3em] text-[#f78da7] mb-2 uppercase">
+            Access
+          </p>
+          <h2 className="text-2xl font-bold text-[#333] tracking-wide">
+            アクセス
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="space-y-4">
+            <div>
+              <p className="text-xs font-semibold text-[#f78da7] mb-1">
+                住所
+              </p>
+              <address className="not-italic text-sm text-[#555] leading-relaxed">
+                〒101-0021
+                <br />
+                東京都千代田区外神田３丁目６−５
+                <br />
+                外神田永谷タウンプラザ 408
+              </address>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-[#f78da7] mb-1">
+                最寄り駅
+              </p>
+              <p className="text-sm text-[#555]">
+                末広町駅 徒歩2分
+                <br />
+                神田明神 徒歩1分
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-[#f78da7] mb-1">
+                営業時間
+              </p>
+              <p className="text-sm text-[#555]">
+                平日 6:30〜20:00
+                <br />
+                土日 6:30〜17:00
+              </p>
+            </div>
+          </div>
+          {/* Map placeholder — replace with actual embed */}
+          <div className="bg-[#f5f5f5] rounded-2xl h-64 flex items-center justify-center text-sm text-[#999]">
+            地図を表示（Googleマップ埋め込み）
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
